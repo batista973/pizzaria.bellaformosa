@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Bella Formosa Pizzaria</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #fff3e6, #f7d6b5);
+  color: #3a1c1c;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 80px 10%;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.6rem;
+  color: #b00000;
+}
+
+.hero-text p {
+  margin-top: 20px;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.hero img {
+  width: 420px;
+  animation: flutuar 4s ease-in-out infinite;
+  filter: drop-shadow(0 30px 40px rgba(0,0,0,0.25));
+}
+
+/* SOBRE */
+section {
+  padding: 90px 10%;
+}
+
+.sobre {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sobre img {
+  width: 420px;
+  border-radius: 30px;
+  animation: flutuar 5s ease-in-out infinite;
+}
+
+.sobre h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+/* CARDÁPIO */
+.cardapio {
+  text-align: center;
+}
+
+.cardapio h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.7rem;
+  margin-bottom: 50px;
+}
+
+.pizzas {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.pizza-card {
+  background: #fff;
+  border-radius: 25px;
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.4s;
+}
+
+.pizza-card:hover {
+  transform: translateY(-15px);
+}
+
+.pizza-card img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.pizza-card h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #b00000;
+}
+
+/* LOCALIZAÇÃO */
+.localizacao {
+  text-align: center;
+}
+
+.localizacao h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.localizacao iframe {
+  margin-top: 30px;
+  width: 100%;
+  height: 320px;
+  border-radius: 20px;
+  border: none;
+}
+
+/* FOOTER BOTÃO */
+footer {
+  padding: 120px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.botao-container {
+  position: relative;
+  display: inline-block;
+}
+
+.saiba-mais {
+  background: linear-gradient(135deg, #b00000, #ff3b3b);
+  color: #fff;
+  padding: 20px 55px;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  z-index: 2;
+  position: relative;
+}
+
+.mini-pizza {
+  position: absolute;
+  width: 60px;
+  animation: orbitar 8s linear infinite;
+}
+
+.p1 { top: -70px; left: 40%; }
+.p2 { bottom: -70px; left: 10%; animation-duration: 10s; }
+.p3 { right: -70px; top: 30%; animation-duration: 9s; }
+.p4 { left: -70px; top: 50%; animation-duration: 11s; }
+
+/* ANIMAÇÕES */
+@keyframes flutuar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes orbitar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .hero img, .sobre img {
+    width: 90%;
+  }
+  .hero-text h1 {
+    font-size: 2.6rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Bella Formosa Pizzaria</h1>
+    <p>
+      Cada pizza nasce de uma massa viva, cresce no calor do forno
+      e chega à mesa carregando tradição, sabor e memória.
+    </p>
+  </div>
+  <img src="bella1.jpeg" alt="Pizza flutuante">
+</section>
+
+<section class="sobre">
+  <img src="bella3.jpg" alt="Pizza artesanal">
+  <div>
+    <h2>Nossa História</h2>
+    <p>
+      A Bella Formosa nasceu do amor pela pizza bem feita.
+      Ingredientes selecionados, queijo que derrete com perfeição
+      e receitas que atravessam gerações.
+    </p>
+  </div>
+</section>
+
+<section class="cardapio">
+  <h2>Sabores que encantam</h2>
+  <div class="pizzas">
+    <div class="pizza-card">
+      <img src="bella1.jpeg">
+      <h3>Clássica Cremosa</h3>
+    </div>
+    <div class="pizza-card">
+      <img src="bella3.jpg">
+      <h3>Especial da Casa</h3>
+    </div>
+  </div>
+</section>
+
+<section class="localizacao">
+  <h2>Venha nos visitar</h2>
+  <p>Avenida Renata, 286 – São Paulo – 03377-000</p>
+
+  <iframe 
+    src="https://www.google.com/maps?q=Avenida%20Renata,%20286,%20São%20Paulo&output=embed">
+  </iframe>
+</section>
+
+<footer>
+  <div class="botao-container">
+    <img src="bella1.jpeg" class="mini-pizza p1">
+    <img src="bella1.jpeg" class="mini-pizza p2">
+    <img src="bella1.jpeg" class="mini-pizza p3">
+    <img src="bella1.jpeg" class="mini-pizza p4">
+
+    <a class="saiba-mais" target="_blank"
+       href="https://www.instagram.com/bellaformosapizzaria/">
+      Saiba mais
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
